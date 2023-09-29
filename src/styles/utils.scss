@@ -1,0 +1,41 @@
+.logo {
+  max-width: 27rem;
+}
+div.sm-logo {
+  display: none;
+}
+.sm-logo {
+  max-width: 20rem;
+}
+.large-display {
+  max-width: 1220px;
+}
+// for mobile
+@media screen and (max-width: 768px) {
+  div.sm-logo {
+    display: flex;
+    height: 25%;
+    min-height: 320px;
+  }
+  img.sm-logo {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .large-display {
+    max-width: 100%;
+    flex-direction: column;
+    height: 70%;
+  }
+  .ld-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  div.logo {
+    display: none;
+  }
+}

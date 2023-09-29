@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  #desktop {
+    display: none;
+  }
+  #mobile,
+  .hmb-container {
+    display: flex;
+  }
+}
+// list of links
+.circle-menu li {
+  // text-align: end;
+  margin-bottom: 20px;
+}
+.circle-menu a {
+  font-weight: semibold;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.circle-menu a:hover {
+  transition: color 0.3s ease;
+  color: rgb(42, 77, 104);
+}
+li {
+  list-style: none;
+}
+
+html.dark {
+  .circle-menu a {
+    color: white;
+  }
+  .circle-menu a:hover {
+    color: #b0eaff;
+  }
+}
+
+// Hamburger Menu
+html.dark {
+  .line {
+    stroke: white;
+  }
+}
+.line {
+  stroke: black;
+}
+.hmb-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  z-index: 10000;
+
+  .line {
+    fill: none;
+    stroke-width: 6;
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    &1 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    &2 {
+      stroke-dasharray: 60 60;
+      stroke-width: 6;
+    }
+    &3 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+  }
+  &.open .line {
+    &1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+    &2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+      stroke-width: 6;
+    }
+    &3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+  }
+}
+
+// Circle Menu Animation
+.circle-menu {
+  position: fixed;
+  top: 1%;
+  right: 1.5%;
+  transform: translate(50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  background-color: #ffffff00;
+  border-radius: 50%;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
+.circle-menu.open {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  top: 5%;
+  right: 5%;
+  background-color: #00b6ff;
+  transition-delay: 250ms;
+  width: 20rem;
+  height: 35rem;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
+.circle-menu::before {
+  transform: scale(0.1);
+  width: 2rem;
+  height: 2rem;
+}
+.mobile-menu {
+  // background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 10%;
+  height: 20rem;
+  margin-top: 25rem;
+  margin-right: 3rem;
+}
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
