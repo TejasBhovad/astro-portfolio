@@ -1,10 +1,9 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const ThemeToggle = () => {
   // Function to toggle the dark mode
   const toggleDarkMode = () => {
     const doc = document.documentElement;
-
     if (doc) {
       if (localStorage.getItem("appTheme")) {
         if (localStorage.getItem("appTheme") === "light") {

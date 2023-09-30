@@ -17,3 +17,25 @@ import Navbar from "../components/Navbar.jsx";
     <slot />
   </body>
 </html>
+
+<script>
+  const theme = (() => {
+    if (
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("appTheme")
+    ) {
+      return localStorage.getItem("appTheme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  window.localStorage.setItem("appTheme", theme);
+</script>
