@@ -59,3 +59,11 @@ div.sm-logo {
 .contain {
   max-height: 210px;
 }
+svg {
+  fill: #070808;
+}
+html.dark {
+  svg {
+    fill: #ffffff;
+  }
+}

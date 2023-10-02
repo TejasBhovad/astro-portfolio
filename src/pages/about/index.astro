@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/index.astro";
 import "../../styles/utils.scss";
+import SquareContainer from "../../components/SquareContainer.jsx";
 ---
 
 <Layout>
@@ -42,10 +43,7 @@ import "../../styles/utils.scss";
       </h3>
     </div>
     <div class="contain w-full h-2/6 flex items-center px-5 gap-2">
-      <div
-        class="w-32 h-32 bg-transparent border-lightSecondary dark:border-darkSecondary border-4 rounded-md"
-      >
-      </div>
+      <SquareContainer client:load type="java" />
     </div>
     <div class="head h-1/6 w-full flex items-center px-5 bg-red-300">
       <h3 class="font-semibold text-6xl text-accent">Tools</h3>

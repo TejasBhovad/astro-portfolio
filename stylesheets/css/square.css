@@ -1,0 +1,18 @@
+.square-container:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #c5d8d8;
+  border-radius: 50%;
+}
+
+.square-container {
+  transition: all 0.3s ease-in-out;
+}
+
+html.dark .square-container:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #082531;
+  border-radius: 50%;
+}
+html.dark .square-container {
+  transition: all 0.3s ease-in-out;
+}
