@@ -1,23 +1,43 @@
 .square-container:hover {
   //   border-color: #7ed4f6;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   background-color: #c5d8d8;
-  border-radius: 50%;
+  border: #173f4f solid 4px;
+  opacity: 0.75;
 }
 .square-container {
   // add transition
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 html.dark {
   .square-container:hover {
     //   border-color: #7ed4f6;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
     background-color: #082531;
-    border-radius: 50%;
+    border: #39829f solid 4px;
+    opacity: 0.75;
   }
   .square-container {
     // add transition
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+}
+svg.other {
+  fill: #082531;
+}
+.square-container:hover {
+  svg.other {
+    fill: #00151d;
+  }
+}
+html.dark {
+  svg.other {
+    fill: #c5d8d8;
+  }
+  .square-container:hover {
+    svg.other {
+      fill: #7ed4f6;
+    }
   }
 }

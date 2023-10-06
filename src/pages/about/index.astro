@@ -37,20 +37,24 @@ import SquareContainer from "../../components/SquareContainer.jsx";
   </div>
   <div class="w-full h-full flex flex-col justify-center">
     <div class="head h-1/6 w-full flex items-center px-5">
-      <h3 class="font-light text-6xl text-white">
+      <h3 class="font-light text-lightText text-6xl dark:text-darkText">
         Professional
         <span class="font-semibold text-6xl text-accent">Skillset</span>
       </h3>
     </div>
-    <div class="contain w-full h-2/6 flex items-center px-5 gap-2">
+    <div class="contain w-full h-2/6 flex items-center px-5 gap-5">
+      <SquareContainer client:load type="nextjs" />
+      <SquareContainer client:load type="react" />
+      <SquareContainer client:load type="python" />
       <SquareContainer client:load type="java" />
     </div>
-    <div class="head h-1/6 w-full flex items-center px-5 bg-red-300">
+    <div class="head h-1/6 w-full flex items-center px-5">
       <h3 class="font-semibold text-6xl text-accent">Tools</h3>
     </div>
-    <div
-      class="contain w-full h-2/6 bg-indigo-400 flex items-center px-5 gap-2"
-    >
+    <div class="contain w-full h-2/6 flex items-center px-5 gap-5">
+      <SquareContainer client:load type="vscode" />
+      <SquareContainer client:load type="vercel" />
+      <SquareContainer client:load type="github" />
     </div>
   </div>
 </Layout>
