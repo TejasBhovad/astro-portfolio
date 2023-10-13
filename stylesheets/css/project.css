@@ -1,0 +1,12 @@
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+svg.other {
+  fill: #082531;
+}
+
+html.dark svg.other {
+  fill: #c5d8d8;
+}

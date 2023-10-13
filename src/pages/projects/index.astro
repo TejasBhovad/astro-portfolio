@@ -1,9 +1,12 @@
 ---
 import Layout from "../../layouts/index.astro";
+import ProjectContainer from "../../components/ProjectContainer";
 ---
 
 <Layout>
   <div class="h-screen pt-12">
-    <div class="bg-indigo-500 h-full"></div>
+    <div class="bg-lightBackground dark:bg-darkBackground h-full">
+      <ProjectContainer />
+    </div>
   </div>
 </Layout>
