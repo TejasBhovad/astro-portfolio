@@ -50,7 +50,7 @@ const ThemeToggle = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-6 h-6 dark:flex hidden"
+          className="w-6 h-6 dark:hidden"
         >
           <path
             strokeLinecap="round"
@@ -64,7 +64,7 @@ const ThemeToggle = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-7 h-7 dark:hidden"
+          className="w-7 h-7 dark:flex hidden"
         >
           <path
             strokeLinecap="round"

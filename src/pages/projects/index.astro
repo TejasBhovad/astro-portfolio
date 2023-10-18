@@ -5,8 +5,16 @@ import ProjectContainer from "../../components/ProjectContainer";
 
 <Layout>
   <div class="h-screen pt-12">
-    <div class="bg-lightBackground dark:bg-darkBackground h-full">
-      <ProjectContainer />
+    <div class="bg-lightBackground dark:bg-darkBackground h-full p-4">
+      <!-- 30 char limit for decription -->
+      <!-- Use appwrite for db https://appwrite.io -->
+      <ProjectContainer
+        image={"/project.png"}
+        title={"Project Title"}
+        description={"Project Description jdfjbjb099"}
+        ghLink={""}
+        liveLink={""}
+      />
     </div>
   </div>
 </Layout>
