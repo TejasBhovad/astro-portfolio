@@ -46,7 +46,7 @@ const ThemeToggle = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="white"
+          fill="black"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
@@ -60,7 +60,7 @@ const ThemeToggle = () => {
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="black"
+          fill="white"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"

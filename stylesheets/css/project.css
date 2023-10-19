@@ -3,10 +3,10 @@ svg {
   height: 20px;
 }
 
-svg.other {
+svg.others {
   fill: #ffffff;
 }
 
-html.dark svg.other {
+html.dark svg.others {
   fill: #082531;
 }
