@@ -32,7 +32,7 @@ const TypeWriter = ({ words, delay = 6000, typingSpeed = 100 }) => {
   }, [currentText, currentIndex, currentWord, delay, typingSpeed]);
 
   return (
-    <div className="text-accent sm:text-6xl text-2xl">
+    <div className="text-accent sm:text-6xl text-2xl h-24">
       {currentText}
       <span className="animate-ping">|</span>
     </div>

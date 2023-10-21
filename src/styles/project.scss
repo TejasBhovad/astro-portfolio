@@ -5,9 +5,46 @@ svg {
 svg.others {
   fill: #ffffff;
 }
-
+.project-container {
+  outline: 1px solid #d9d8d8;
+  transition: all 0.2s ease-in-out;
+  // create outline gray on hover
+  &:hover {
+    outline: 1px solid #bdc4ca;
+    transition: all 0.125s ease-in-out;
+  }
+}
 html.dark {
   svg.others {
     fill: #082531;
+  }
+  .project-container {
+    outline: 1px solid #303030;
+    transition: all 0.2s ease-in-out;
+    // create outline gray on hover
+    &:hover {
+      outline: 1.5px solid #31373c;
+      transition: all 0.125s ease-in-out;
+    }
+  }
+}
+.project-panel {
+  justify-content: start;
+  // background: #251616;
+}
+@media screen and (min-width: 1500px) {
+  /* Your CSS styles for large displays go here */
+  .project-panel {
+    justify-content: center;
+    // background: #251616;
+  }
+}
+// mobile
+@media screen and (max-width: 767px) {
+  /* Your CSS styles for small screens go here */
+  .project-panel {
+    justify-content: center;
+
+    // background: #251616;
   }
 }
