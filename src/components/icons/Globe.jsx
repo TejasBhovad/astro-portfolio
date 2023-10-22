@@ -7,7 +7,7 @@ function Icon() {
       width="80"
       height="80"
       viewBox="0 0 32 32"
-      className=""
+      className="logo"
     >
       <g fill="none" fillRule="evenodd" stroke="none" strokeWidth="2">
         <g fill="#fff" transform="translate(-204 -671)">

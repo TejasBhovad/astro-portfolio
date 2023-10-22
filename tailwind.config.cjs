@@ -14,6 +14,7 @@ module.exports = {
         darkBackground: "#070808",
         darkSecondary: "#082531",
         darkUtility: "#191A1C",
+        lightUtility: "#DDDDDD",
         live: "#00C708",
       },
     },

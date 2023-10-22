@@ -1,60 +1,27 @@
 ---
 import Layout from "../../layouts/index.astro";
 import "../../styles/utils.scss";
-import SquareContainer from "../../components/SquareContainer.jsx";
+import SkillGrid from "../../components/SkillGrid.jsx";
+import About from "../../components/About.jsx";
 ---
 
 <Layout>
   <div class="h-full w-full pt-12 flex items-center justify-center">
-    <div class="h-full w-full flex about">
-      <div class="h-full sm:w-3/5 w-full" style="min-height: 650px;">
-        <div class="h-1/6 flex items-center px-5">
-          <h3 class="font-semibold text-6xl text-accent">About Me</h3>
-        </div>
-        <div
-          class="h-3/6 desc flex flex-col gap-8 justify-center text-2xl px-5"
-        >
-          <p>I am passionate Developer with love for everything tech.</p>
-          <p>
-            I have learned Java and explored most of web development like
-            NextJS, MongoDB and ThreeJS.
-          </p>
-          <p>
-            My love for programming emerged from creating Minecraft DataPacks
-            which now have over 600k downloads.
-          </p>
-        </div>
-        <div class="h-1/6 flex items-start text-2xl px-5 py-5">
-          <div
-            class="h-12 quote border-l-4 px-5 flex items-center border-lightSecondary dark:border-darkSecondary text-darkSecondary dark:text-lightSecondary"
-          >
-            I love good minimal designs, OSS and learning new things
-          </div>
-        </div>
+    <div class="h-full w-full flex px-2 py-4">
+      <div class="w-full h-full flex items-center justify-center">
+        <About />
       </div>
-      <div class="three bg-green-600 h-full w-2/5"></div>
     </div>
   </div>
-  <div class="w-full h-full flex flex-col justify-center">
-    <div class="head h-1/6 w-full flex items-center px-5">
-      <h3 class="font-light text-lightText text-6xl dark:text-darkText">
-        Professional
-        <span class="font-semibold text-6xl text-accent">Skillset</span>
-      </h3>
-    </div>
-    <div class="contain w-full h-2/6 flex items-center px-5 gap-5">
-      <SquareContainer client:load type="nextjs" />
-      <SquareContainer client:load type="react" />
-      <SquareContainer client:load type="python" />
-      <SquareContainer client:load type="java" />
-    </div>
-    <div class="head h-1/6 w-full flex items-center px-5">
-      <h3 class="font-semibold text-6xl text-accent">Tools</h3>
-    </div>
-    <div class="contain w-full h-2/6 flex items-center px-5 gap-5">
-      <SquareContainer client:load type="vscode" />
-      <SquareContainer client:load type="vercel" />
-      <SquareContainer client:load type="github" />
-    </div>
+  <div
+    class="w-full h-fit flex flex-col px-2 py-8 flex flex-col items-center cursor-default"
+  >
+    <h1
+      class="text-5xl font-semibold underline decoration-accent decoration-6 hover:decoration-primary duration-400 ease-in-out transition"
+    >
+      Skills
+    </h1>
+    <p class="py-5 font-medium text-lg">Tech I have worked with ..</p>
+    <SkillGrid />
   </div>
 </Layout>
