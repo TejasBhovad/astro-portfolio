@@ -64,9 +64,9 @@ const About = () => {
               <span className="text-darkUtility dark:text-lightSecondary text-lg">
                 Tejas Bhovad
               </span>
-              <p className="text-3xl">Tech enthusiast.</p>
-              <p className="text-3xl">Infinitely Curious.</p>
-              <p className="text-3xl">Full Stack Developer.</p>
+              <p className="md:text-3xl text-2xl">Tech enthusiast.</p>
+              <p className="md:text-3xl text-2xl">Infinitely Curious.</p>
+              <p className="md:text-3xl text-2xl">Full Stack Developer.</p>
             </div>
           </div>
           <div

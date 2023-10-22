@@ -2,13 +2,63 @@
 import Navbar from "../components/Navbar.jsx";
 ---
 
-<html lang="en" class="w-full h-full">
+<html lang="en" class="w-full h-full dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <!-- meta data for astro seo -->
+    <meta name="description" content="Tejas Bhovad's Portfolio" />
+    <meta name="keywords" content="Tejas Bhovad, Portfolio, Tejas, Bhovad" />
+    <meta name="author" content="Tejas Bhovad" />
+    <meta name="url" content="https://tejasbhovad.vercel.app" />
+    <meta name="og:title" content="Tejas Bhovad" />
+    <meta name="og:description" content="Tejas Bhovad's Portfolio" />
+    <meta name="og:image" content="https://tejasbhovad.vercel.app/og.png" />
+    <meta name="og:url" content="https://tejasbhovad.vercel.app" />
+    <meta name="og:site_name" content="Tejas Bhovad" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tejas_bhovad" />
+    <meta name="twitter:creator" content="@tejas_bhovad" />
+    <meta name="twitter:title" content="Tejas Bhovad" />
+    <meta name="twitter:description" content="Tejas Bhovad's Portfolio" />
+    <meta
+      name="twitter:image"
+      content="https://tejasbhovad.vercel.app/og.png"
+    />
+    <meta name="twitter:url" content="https://tejasbhovad.vercel.app" />
+    <meta name="twitter:label1" content="Created by" />
+    <meta name="twitter:data1" content="Tejas Bhovad" />
+    <!-- web manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Portfolio | Tejas Bhovad</title>
+    <script is:inline>
+    // set dark mode as default
+    if (
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("appTheme") === null
+    ) {
+      localStorage.setItem("appTheme", "dark");
+    }
+    const toggleDarkMode = () => {
+      const theme = localStorage.getItem("appTheme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    };
+
+    toggleDarkMode(); // Call the function when the page loads to set the initial theme.
+
+    // You can also add an event listener to update the theme when it changes.
+    window.addEventListener("storage", toggleDarkMode);
+    </script>
   </head>
   <body
     class="bg-lightBackground text-lightText dark:bg-darkBackground dark:text-darkText w-full h-screen"
