@@ -3,7 +3,7 @@ import ProjectContainer from "./ProjectContainer";
 import ProjectSkeleton from "./ProjectSkeleton";
 import "../styles/project.scss";
 import Filter from "./Filter";
-import { fetchDocuments } from "./DataHandler";
+import { fetchDocuments } from "./DataHandler.jsx";
 
 const Projects = () => {
   const numSkeletons = 5;

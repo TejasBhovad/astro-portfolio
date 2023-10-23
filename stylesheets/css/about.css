@@ -1,6 +1,3 @@
-.one-pane {
-  display: none;
-}
 @media (max-width: 768px) {
   .one-pane {
     flex-direction: column;
