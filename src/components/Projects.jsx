@@ -3,7 +3,8 @@ import ProjectContainer from "./ProjectContainer";
 import ProjectSkeleton from "./ProjectSkeleton";
 import "../styles/project.scss";
 import Filter from "./Filter";
-import { fetchDocuments } from "./DataHandler.jsx";
+import { Client, Databases, Query } from "appwrite";
+// import { fetchDocuments } from "./DataHandler.jsx";
 
 const Projects = () => {
   const numSkeletons = 5;
@@ -13,6 +14,21 @@ const Projects = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [isFetched, setIsFetched] = useState(false);
 
+  //fetch data from appwrite
+
+  function fetchDocuments() {
+    const client = new Client()
+      .setEndpoint(import.meta.env.PUBLIC_API_ENDPOINT)
+      .setProject(import.meta.env.PUBLIC_PROJECT_ID);
+
+    const databases = new Databases(client);
+
+    return databases.listDocuments(
+      import.meta.env.PUBLIC_DATABASE_ID,
+      import.meta.env.PUBLIC_COLLECTION_ID,
+      [Query.limit(50)]
+    );
+  }
   useEffect(() => {
     setIsMounted(true);
 
