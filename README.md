@@ -17,3 +17,4 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0C1222?style=for-the-badge&logo=tailwind-css&logoColor=FDFDFE)
 
 Took a minimal approach to the design, and used AstroJS to make the site <i>🔥BLAZINGLY FAST</i>
+
